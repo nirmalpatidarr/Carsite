@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        li {
+            list-style: none;
+            margin-left: 50px;
+            font-size: 20px;
+        }
+
+        header {
+            background-color: red;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 1;
+
+
+        }
+
+        .nav-link {
+            color: white;
+        }
+
+        .navbar-brand {
+            color: white;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-item {
+            margin-right: 50px;
+        }
+
+        section {
+            height: 100%;
+        }
+
+        .aaa {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+
+        .bbb {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+        }
+
+        .drpwn {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            background-color: red;
+            padding: 30px;
+            height: 200px;
+            width: 100%;
+            margin-top: 0px;
+        }
+
+        select {
+            margin-left: 20px;
+            width: 300px;
+            height: 50px;
+
+        }
+
+        .range {
+
+            margin-top: 10px;
+            margin-left: 30px;
+            width: 250px;
+            height: 30px;
+            background: #d3d3d3;
+
+        }
+
+        #lexus:hover {
+            transform: scale(1.04);
+            transition: 1s;
+        }
+
+        #Lamborghini:hover {
+            transform: scale(1.04);
+            opacity: 1;
+            transition: 1s;
+        }
+
+        .middle {
+            margin-top: 120px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(245, 245, 245);
+            height: 500px;
+            margin-top: 100px;
+        }
+
+        .left {
+            margin-top: 150px;
+        }
+
+        .content-right {
+            margin-top: 40px;
+
+        }
+
+        .r-right {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .r-one {
+            height: 200px;
+            width: 300px;
+            background-color: white;
+        }
+
+        .r-two {
+            height: 200px;
+            width: 300px;
+            margin-left: 40px;
+            background-color: white;
+        }
+
+        .content-left {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .r-three {
+            height: 200px;
+            width: 300px;
+            margin-top: 20px;
+            background-color: white;
+        }
+
+        .r-four {
+            height: 200px;
+            width: 300px;
+            margin-top: 20px;
+            background-color: white;
+        }
+
+        .content-right h4 {
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 15px;
+            margin-top: 20px;
+        }
+
+        .content-right p {
+            margin-left: 15px;
+            margin-top: 20px;
+        }
+
+        .read {
+            margin-left: 15px;
+            display: none;
+        }
+
+        .r-one:hover .read {
+            display: block;
+            color: red;
+        }
+
+        .r-two:hover .read {
+            display: block;
+            color: red;
+        }
+
+        .r-three:hover .read {
+            display: block;
+            color: red;
+        }
+
+        .r-four:hover .read {
+            display: block;
+            color: red;
+        }
+
+        .car-photos {
+            display: flex;
+        }
+
+        .car-photos {
+            display: flex;
+            justify-content: center;
+            /* margin: 50px; */
+
+        }
+
+        .electric {
+            position: absolute;
+            display: flex;
+            margin-top: 220px;
+            margin-left: 20px;
+            color: white;
+            font-family: sans-serif;
+            font-weight: bold;
+
+        }
+
+        .Audi {
+            position: absolute;
+            display: flex;
+            margin-top: 430px;
+            margin-left: 20px;
+            color:white;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        .blue {
+            overflow: hidden;
+        }
+
+        .white-car {
+            height: 250px;
+            width: 350px;
+            overflow: hidden;
+        }
+
+        .car-photos2 {
+            overflow: hidden;
+        }
+
+        .audi-car {
+            overflow: hidden;
+        }
+
+        .x:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .y:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .zz:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .z:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .jay {
+            margin-top: 50px;
+        }
+
+        .car-flex {
+            /* position: relative; */
+            height: 400px;
+            margin-top: 50px;
+        }
+
+
+        .flex-content {
+            font-family: Arial;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .flex-content1 {
+            font-family: Arial;
+            font-size: 15px;
+            color: red;
+
+        }
+
+        .flex-row {
+            /* position: absolute; */
+            /* top: 1px; */
+            margin-top: -280px;
+            margin-left: 60px;
+
+        }
+
+        .review {
+            display: flex;
+            /* position: absolute; */
+            margin-top: -180px;
+            padding-left: 530px;
+
+        }
+
+        .delear {
+            display: flex;
+            margin-left: 50px;
+            height: 100px;
+            width: 240px;
+            justify-content: center;
+            background-color: rgb(43, 42, 42, 0.5);
+            margin-top: 20px;
+            transform: scale(1);
+            transition: 3sec;
+            font-family: Arial;
+
+        }
+
+        .delear:hover {
+            transform: scale(1.2);
+            transition: 3sec;
+        }
+
+        .pensil {
+            font-size: 50px;
+            padding-right: 20px;
+            margin-top: 15px;
+            color: red;
+
+        }
+
+        .pensil-1 {
+            font-size: 15px;
+            color: rgb(234, 234, 234);
+        }
+
+        footer {
+            background-image: url(./images/car-footer.jpg);
+            height: 400px;
+            width: 100%;
+            color: white;
+            margin-top: 50px;
+        }
+       
+
+        footer li {
+            list-style: none;
+        }
+
+        .footer-one li {
+            padding: 10px;
+            font-size: 15px;
+        }
+
+        .footer-two li {
+            /* padding: 5px; */
+            
+        }
+
+        a {
+            color: white;
+text-decoration: none;
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+    <header>
+        <nav class="navbar navbar-expand-lg ms-3">
+            <div class="container-fluid ">
+                <a class="navbar-brand ms-5" href="#">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto ">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Car Listing</a>
+                            <ul class="dropdown-menu mt-2">
+                                <li><a class="dropdown-item" href="#">Car List</a></li>
+                                <li><a class="dropdown-item" href="#">Various Model</a></li>
+                                <li><a class="dropdown-item" href="#">Car Compare</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                            <ul class="dropdown-menu mt-2">
+                                <li><a class="dropdown-item" href="#">Car Services</a></li>
+                                <li><a class="dropdown-item" href="#">Available Model</a></li>
+                                <li><a class="dropdown-item" href="#">Other Services</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#">
+                                Pages
+                            </a>
+
+                            <ul class="dropdown-menu mt-2">
+                                <li><a class="dropdown-item" href="#">About Us</a></li>
+                                <li><a class="dropdown-item" href="#">Team Detail</a></li>
+
+                                <li><a class="dropdown-item" href="#">Car Compare</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Shop</a>
+                            <ul class="dropdown-menu mt-2">
+                                <li><a class="dropdown-item" href="#">Shop List</a></li>
+                                <li><a class="dropdown-item" href="#"> Shop Various Model</a></li>
+                                <li><a class="dropdown-item" href="#">Shop cart</a></li>
+                                <li><a class="dropdown-item" href="#">Shop cart Model</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                            <ul class="dropdown-menu mt-2">
+                                <li><a class="dropdown-item" href="#">Blog Us</a></li>
+                                <li><a class="dropdown-item" href="#">Blog Detail</a></li>
+                                <li><a class="dropdown-item" href="#">Blog Post</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search">
+                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#detail">
+                            <div class="me-5">Search</div>
+                        </button>
+                    </form>
+                    <div class="modal fade" id="detail">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header" style="color:black;">
+                                    Choose Your Location
+                                </div>
+                                <div class="modal-body">
+                                    <p style="color:black;">Select a delivery location to see product availability and
+                                        delivery options</p>
+                                    <button class="btn btn-warning w-100">sign in to see your address</button>
+                                    <fieldset>
+                                        <legend>or enter an Indian pincode</legend>
+                                    </fieldset>
+                                    <span class="ms-5"><input type="text"> <button
+                                            class="btn btn-danger">Apply</button></span>
+                                </div>
+                                <div class="footer">
+                                    <div class="dropup">
+                                        <button class="dropdown-toggle btn btn-info w-100" data-bs-toggle="dropdown"
+                                            data-bs-target="#lala">Deliver out side India</button>
+                                        <div class="dropdown-menu" id="lala">
+                                            <div class="dropdown-item">Shrilanka</div>
+                                            <div class="dropdown-item">Bangladesh</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="carousel slide" id="banners" data-bs-ride="carousel">
+            <div class="carousel-inner ">
+                <div class="carousel-item active">
+                    <img src="./images/car-1.jpg" width="100%" height="500px">
+                    <div class="aaa">
+                        <h1 style="font-size: 50px; color: white;">
+                            EXPLORE YOUR DREAM CAR</h1>
+                        <p class="mt-4" style="font-size: 20px; color: white;">Allow us to guide you through the
+                            innovative
+                            stress<br>
+                            free approach in finding your dream car.</p>
+                        <div class="mt-3">
+                            <button class="btn btn-danger">ORDER NOW</button>
+                            <button class="btn btn-success">TEST NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/car-black.jpg" width="100%" height="500px">
+                    <div class="aaa">
+                        <h1 style="font-size: 50px; color: white;">
+                            WOW FACTOR STANDARD</h1>
+                        <p class="mt-4" style="font-size: 20px; color: white;">Allow us to guide you through the
+                            innovative
+                            stress<br>
+                            free approach in finding your dream car..</p>
+                        <div class="mt-3">
+                            <button class="btn btn-danger">ORDER NOW</button>
+                            <button class="btn btn-success">TEST NOW</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/car-slide.jpg" width="100%" height="500px">
+                    <div class="bbb">
+                        <h1 style="font-size: 50px; color: white;">
+                            WE ARE WHEEL</h1>
+                        <p class="mt-4" style="font-size: 20px; color: white;">Allow us to guide you through the
+                            innovative
+                            stress<br>
+                            free approach in finding your dream car.</p>
+                        <div class="mt-3">
+                            <button class="btn btn-danger">ORDER NOW</button>
+                            <button class="btn btn-success">TEST NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators">
+                <button class="active" data-bs-slide-to="0" data-bs-target="#banners"></button>
+                <button data-bs-slide-to="1" data-bs-target="#banners"></button>
+                <button data-bs-slide-to="2" data-bs-target="#banners"></button>
+
+            </div>
+        </div>
+        <div class="drpwn">
+
+            <select>
+                <option value="selected">select Brand</option>
+                <option>AUDI</option>
+                <option>BMW</option>
+                <option>HONDA</option>
+                <option>NISAAN</option>
+            </select>
+            <select>
+                <option value="selected">select make</option>
+                <option>BMW</option>
+                <option>HONDA</option>
+                <option>LAMBORGHINI</option>
+                <option>SPORT CAR</option>
+            </select>
+            <select>
+                <option value="selected">select location</option>
+                <option>INDIA</option>
+                <option>UNITED KINGDOM</option>
+                <option>UNITED STATE</option>
+            </select>
+            <select>
+                <option value="selected">Select year</option>
+                <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+            </select>
+            <select class="mt-3">
+                <option value="selected">Select Type of car</option>
+                <option>OLD</option>
+                <option>NEW</option>
+                <option>REFURBISED</option>
+            </select>
+            <select class="mt-3">
+                <option value="selected">Transmission</option>
+                <option>Automatic</option>
+                <option>Manual</option>
+
+            </select>
+            <div class="mt-3"><input type="range" class="range" min="10" max="1000" value="10"></div>
+            <div class="mt-3" style="width: 300px; margin-left: 20px;"><button
+                    class="btn btn-light w-100 ">Search</button></div>
+        </div>
+
+
+        <div class="middle">
+            <h1 align="center">Featured <font color="red">Car</font>
+            </h1>
+            <p align="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+
+            <div class="d-flex justify-content-around">
+                <div>
+                    <div class="mt-3"><img src="./images/car3.jpg" id="lexus" height="250px" width="400px">
+                        <!-- <h6 style="position: absolute; top: 150px; left: 300px; color: red; font-family: Arial, Helvetica, sans-serif;">FOR RENT</h6> -->
+                    </div>
+                    <div class="border">
+                        <p class="text-danger ms-3 " style="font-weight: bold;">Lexus GS Red</p>
+                        <p class="bi bi-pin-map ms-3"> 123 khatal street</p>
+                        <hr>
+                        <span class="bi bi-star-fill ms-3"><span class="bi bi-star-fill"><span
+                                    class="bi bi-star-fill"><span class="bi bi-star-fill">(65 review)
+                                    </span></span></span></span>
+                        <span style="margin-left:200px;color: red;">$750</span>
+                    </div>
+
+                </div>
+                <div class=" ">
+                    <div><img src="./images/car4.jpg" id="Lamborghini" height="300px" width="450px">
+                        <!-- <h6>FOR SALE</h6> -->
+
+                    </div>
+                    <div class="border">
+                        <span>
+                            <p class="text-danger ms-3" style="font-weight: bold;">Lamborghini Huracan</p>
+                            <p class="bi bi-pin-map ms-3"> 123 khatal street</p>
+                        </span>
+                        <hr>
+                        <span class="bi bi-star-fill ms-3"><span class="bi bi-star-fill"><span
+                                    class="bi bi-star-fill"><span class="bi bi-star-fill">(65 review)
+                                    </span></span></span></span>
+
+                        <span style="margin-left:250px;color: red;">$750</span>
+                    </div>
+                </div>
+                <div class="mt-3 me-3">
+                    <div><img src="./images/car-5.jpg" id="Lamborghini" height="250px" width="400px">
+                        <!-- <h6>FOR SALE</h6> -->
+                    </div>
+                    <div class="border">
+                        <span>
+                            <p class="text-danger ms-3" style="font-weight: bold;">Porsche Cayenne</p>
+                            <p class="bi bi-pin-map ms-3"> 123 khatal street</p>
+                        </span>
+                        <hr>
+                        <span class="bi bi-star-fill ms-3"><span class="bi bi-star-fill"><span
+                                    class="bi bi-star-fill"><span class="bi bi-star-fill">(65 review)
+                                    </span></span></span></span>
+                        <span style="margin-left:200px;color: red;">$750</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content">
+            <div class="left">
+                <h2 style="font-family: sans-serif; font-weight: 700;">What you Are <font color="red"> Looking for
+                    </font>
+                </h2>
+                <p>better and nice cars and their modification better and<br> nice cars and their modification</p>
+                <button class="btn btn-danger">Read More</button>
+            </div>
+            <div class="content-right">
+                <div class="r-right">
+                    <div class="r-one border border-danger  rounded">
+                        <h4>Highly Secured</h4>
+                        <p> laborum nesciunt ab. Recusandae<br>dignissimos quo corporis laudantium<br>
+                            exercitationem
+                            dolor doloribus ullam?
+                        </p>
+                        <a class="read" href="#">Read More</a>
+                    </div>
+                    <div class="r-two border  border-danger rounded">
+                        <h4>Trusted Agents</h4>
+                        <p laborum nesciunt ab. Recusandae<br> dignissimos quo corporis laudantium ignissimos quo
+                            corporis
+                            laudantium<br>
+                            exercitationem
+                            dolor doloribus ullam?
+                        </p>
+                        <a class="read" href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="content-left">
+                    <div class="r-three border border-danger  rounded">
+                        <h4>Get An Offer</h4>
+                        <p class="word"> laborum nesciunt ab. Recusandae<br>dignissimos quo corporis laudantium<br>
+                            exercitationem
+                            dolor doloribus ullam?
+                        </p>
+                        <a class="read" href="#">Read More</a>
+                    </div>
+                    <div class="r-four border border-danger  rounded">
+                        <h4>Free Support</h4>
+                        <p class="word"> laborum nesciunt ab. Recusandae<br>dignissimos quo corporis laudantium<br>
+                            exercitationem
+                            dolor doloribus ullam?
+                        </p>
+                        <a class="read" href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main>
+            <div class="jay">
+                <div class="photos">
+                    <h4 align="center">Latest <font color="red">Offers</font>
+                    </h4>
+                    <p class="d-flex justify-content-center">Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit, sed do
+                        eiusmod</p>
+                </div>
+                <div class="car-photos">
+                    <div class="car-main1">
+                        <div class="d-flex">
+                            <div class="blue ">
+                                <p class="electric">Electric Car of 2019</p>
+                                <img class="x" src="./images/car6.jpg" style="border-radius: 5px;" height="250px"
+                                    width="350px">
+
+                            </div>
+                            <div class="white-car ms-2">
+                                <p class="electric">Lamborghini Huracane</p>
+                                <img src="./images/car7.jpg" class="y" style="border-radius: 5px;" height="250px"
+                                    width="350px">
+                            </div>
+                        </div>
+                        <div class="car-photos2 mt-2">
+                            <p class="electric">Lamborghini Huracane</p>
+                            <img class="zz" src="./images/car8.jpg" style="border-radius: 5px;" height="250px"
+                                width="710px">
+                        </div>
+                    </div>
+                    <div class=" audi-car ms-2">
+                        <p class="Audi">RED Audi R8 2018</p>
+                        <img class="z" src="./images/car9.jpg" style="border-radius: 5px;" height="510px" width="380px">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="car-flex">
+            <div class="caar"><img src="./images/car11.jpg" width="100%" height="340px">
+                <div class="flex-row">
+                    <p class="flex-content">
+                        More Than 10 Years <font color="red">Of<br>Experience</font>
+                    </p>
+                    <p class="flex-content1">In Car Selling over Worldwide</p>
+                </div>
+                <div class="review">
+
+                    <div>
+                        <div class="delear">
+                            <p class="pensil"><span class="bi bi-pencil-square"></span></p>
+                            <p class="pensil-1">
+                                <font color="red" size="6">1276</font><br>
+                                Dealers Review
+                            </p>
+                        </div>
+                        <div class="delear">
+                            <p class="pensil"><span class="bi bi-award-fill"></span></p>
+                            <p class="pensil-1">
+                                <font color="red" size="6">177</font><br>
+                                Awards Winnings
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="delear">
+                            <p class="pensil"><span class="bi bi-car-front"></span></p>
+                            <p class="pensil-1">
+                                <font color="red" size="6">977</font><br>
+                                Total Cars
+                            </p>
+                        </div>
+                        <div class="delear">
+                            <p class="pensil"><span class="bi bi-person-circle"></span></p>
+                            <p class="pensil-1">
+                                <font color="red" size="6">1276</font><br>
+                                Happy Clients
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row" style="height: 400px; width: 100%;">
+            <div class="col-6">
+                <img src="./images/car-9.jpg" height="400px" width="100%">
+            </div>
+            <div class="col-6">
+                <div>
+
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <h3 align="center" class="mt-3">Why Clients <font color="red">Love Us</font>
+                                </h3>
+                                <p class="mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry. Lorem
+                                    Ipsum
+                                    has
+                                    been the
+                                    industry's standard
+
+                                </p>
+                                <span class="mt-3" style="display: flex; justify-content: center;"><img
+                                        src="./images/a2.jpg" class="d-block" style="border-radius:100px;"
+                                        height="200px" width="200px" alt="..."></span>
+                                <span class="mt-3" style="display: flex; justify-content: center;">
+                                    <p style="color:red;">Carolyn Stone<br>
+                                        Web Designer, Uk</p>
+                                </span>
+                            </div>
+                            <div class="carousel-item">
+                                <h3 align="center">Why Clients <font color="red">Love Us</font>
+                                </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has
+                                    been the
+                                    industry's standard
+                                    dummy text everLorem industry's standard dummy text everLorem Ipsum Lorem Ipsum is
+                                    simply
+                                    dummy text
+                                    of the printing. as
+                                </p>
+                                <span style="display: flex; justify-content: center;"><img src="./images/a3.jpg"
+                                        class="d-block " style="border-radius:100px;" height="200px" width="200px"
+                                        alt="..."></span>
+                                <span class="mt-3" style="display: flex; justify-content: center;">
+                                    <p style="color:red">Karen Paran<br>
+                                        CEO, Brick Consulting
+                                    </p>
+                                </span>
+                            </div>
+                            <div class="carousel-item">
+                                <h3 align="center">Why Clients <font color="red">Love Us</font>
+                                </h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has
+                                    been the
+                                    industry's standard
+                                    dummy text everLorem industry's standard dummy text everLorem Ipsum Lorem Ipsum is
+                                    simply
+                                    dummy text
+
+                                </p>
+                                <span style="display: flex; justify-content: center;"><img src="./images/a4.jpg"
+                                        class="d-block " style="border-radius:100px;" height="200px" width="200px"
+                                        alt="..."></span>
+                                <span class="mt-3" style="display: flex; justify-content: center;">
+                                    <p style="color:red;">Michelle Nelson<br>
+                                        Designer, Us</p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <footer>
+        <div class="footer-inner m-2 p-2">
+            <div class="row ">
+                <div class="col-3 mt-3">
+                    <div class="footer-one">
+                        <h3 style="margin-left: 90px;">Contact Info</h3>
+                        <ul>
+                            <li class="bi bi-pin"> 20/F Green Road, Dhanmondi, Dhaka</li>
+                            <li class="bi bi-inbox"><a href="#">info@themevessel.com</a></li>
+                            <li class="bi bi-telephone"> +0477 85X6 552</li>
+                            <li class="bi bi-telephone"> +0024 85X6 987</li>
+                            <li class="bi bi-globe"> <a href="#">carhouse@themevessel.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3 mt-3">
+                    <div class="footer-two">
+                        <h3 class="ms-5">Useful Links</h3>
+                        <ul class="mt-2">
+                            <li><a href="#"><span>Home</span></a></li>
+                            <li><a href="#"><span>About Us</span></a></li>
+                            <li><a href="#"><span>Services</span></a></li>
+                            <li><a href="#"><span>Car Listing</span></a></li>
+                            <li><a href="#"><span>Blog</span></a></li>
+                            <li><a href="#"><span>Gallery</span></a></li>
+                            <li><a href="#"><span>Contact us</span></a></li>
+                            <li><a href="#"><span>Elements</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-3 mt-3">
+                    <div class="footer-three">
+                        <h3>Recent Cars</h3>
+                        <div class="mt-4">
+                            <div class="d-flex">
+                                <a href="#"><img src="./images/small-car-3.jpg" height="60px"></a>
+                                <div class="ms-2">
+                                    <h5>Bentley Continental GT</h5>
+                                    <div>$3500 | <span class="bi bi-calendar-fill"> Jan 12, 2020</span></div>
+                                </div>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <a href="#"><img src="./images/small-car-1.jpg" height="60px"></a>
+                                <div class="ms-2">
+                                    <h5>Fiat Punto Red</h5>
+                                    <div>$745,00 | <span class="bi bi-calendar-fill"> Sep 06, 2021</span></div>
+                                </div>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <a href="#"><img src="./images/small-car-2.jpg" height="60px"></a>
+                                <div class="ms-2">
+                                    <h5> Nissan Micra Gen5</h5>
+                                    <div>$745.00 | <span class="bi bi-calendar-fill"> Aug 12, 2021</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-3 mt-3">
+                    <div class="footer-four">
+                        <h3>Subscribe</h3>
+                        <p class="mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                            Ipsum has been the industry's standard dummy text ever since the 1500sIpsum has been the
+                            industry's standard dummy text ever since the 1500s,</p>
+
+                        <div class="d-flex mt-4">
+                            <input type="text" placeholder="Email Address" class="form-control w-50"><button
+                                class="btn btn-danger w-25 ms-3">
+                                <sapn class="bi bi-telegram"></sapn>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
